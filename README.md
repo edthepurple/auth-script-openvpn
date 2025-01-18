@@ -13,7 +13,6 @@
 AUTH_SUCCESS="1"
 AUTH_FAILURE="0"
 
-# Function to write the value to the control file and exit
 respond_with() {
   value=$1
   control_path=$2
@@ -21,23 +20,17 @@ respond_with() {
   exit 0
 }
 
-# Read the username and password from the environment variables passed by OpenVPN
 username=$username
 password=$password
 
-# Read the auth_control_file from the environment variable passed by OpenVPN
 auth_control_file=$auth_control_file
 
-# API authentication endpoint
 AUTH_URL="https://api.chacha20.com/login.php"
 
-# Make the HTTP request to authenticate the user
 response=$(curl -s "${AUTH_URL}?username=${username}&password=${password}")
 
-# Parse the JSON response to extract the status field
 status=$(echo "$response" | jq -r '.status')
 
-# Check if the status is "success"
 if [ "$status" == "success" ]; then
   respond_with "$AUTH_SUCCESS" "$auth_control_file"
 else
