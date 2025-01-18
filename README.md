@@ -45,6 +45,7 @@ if [ "$status" == "success" ]; then
 else
   respond_with "$AUTH_FAILURE" "$auth_control_file"
 fi
-
+```
+note: make sure you have jq installed. on ubuntu use apt install jq -y to install it.
 
 **ENJOY**
