@@ -1,10 +1,10 @@
-1. cd ~ && git clone https://github.com/edthepurple/auth-script-openvpn
-2. cd auth-script-openvpn
-3. make
-4. mv openvpn-plugin-auth-script.so /usr/local/lib/openvpn/plugins
+1. ```cd ~ && git clone https://github.com/edthepurple/auth-script-openvpn```
+2. ```cd auth-script-openvpn```
+3. ```make```
+4. ```mv openvpn-plugin-auth-script.so /usr/local/lib/openvpn/plugins```
 5. edit openvpn server configuration and place this there
 
-   plugin /usr/local/lib/openvpn/plugins/openvpn-auth-script.so /etc/openvpn/scripts/login.sh
+   ```plugin /usr/local/lib/openvpn/plugins/openvpn-auth-script.so /etc/openvpn/scripts/login.sh```
 
 6. your login script can be something like this
 
