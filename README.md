@@ -1,4 +1,4 @@
-1. ```cd ~ && apt install build-essentials -y && git clone https://github.com/edthepurple/auth-script-openvpn```
+1. ```cd ~ && apt install build-essential -y && git clone https://github.com/edthepurple/auth-script-openvpn```
 2. ```cd auth-script-openvpn```
 3. ```make```
 4. ```mv openvpn-plugin-auth-script.so /usr/local/lib/openvpn/plugins```
